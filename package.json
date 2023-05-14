@@ -79,7 +79,7 @@
     "typeorm": "^0.3.14",
     "typeorm-seeding": "^1.2.0",
     "typeorm-typedi-extensions": "^0.2.1",
-    "typescript": "^3.6.3",
+    "typescript": "^3.9.10",
     "uuid": "^3.3.2",
     "winston": "3.1.0"
   },
