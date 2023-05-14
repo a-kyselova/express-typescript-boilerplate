@@ -65,7 +65,7 @@
     "nodemon": "^2.0.17",
     "nps": "^5.9.10",
     "nps-utils": "^1.5.0",
-    "pg": "^7.4.3",
+    "pg": "^7.18.2",
     "reflect-metadata": "^0.1.10",
     "routing-controllers": "^0.8.0",
     "routing-controllers-openapi": "^1.8.0",
