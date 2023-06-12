@@ -278,7 +278,7 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-accepts@^1.3.0, accepts@^1.3.4, accepts@~1.3.4, accepts@~1.3.5:
+accepts@^1.3.4, accepts@~1.3.4, accepts@~1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
   integrity sha1-63d99gEXI6OxTopywIBcjoZ0a9I=
@@ -286,7 +286,7 @@ accepts@^1.3.0, accepts@^1.3.4, accepts@~1.3.4, accepts@~1.3.5:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
-accepts@~1.3.8:
+accepts@^1.3.7, accepts@~1.3.8:
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.8.tgz#0bf0be125b67014adcb0b0921e62db7bffe16b2e"
   integrity sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==
@@ -2077,15 +2077,15 @@ express-basic-auth@^1.1.7:
   dependencies:
     basic-auth "^2.0.1"
 
-express-graphql@^0.6.11:
-  version "0.6.12"
-  resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.6.12.tgz#dfcb2058ca72ed5190b140830ad8cdbf76a9128a"
-  integrity sha512-ouLWV0hRw4hnaLtXzzwhdC79ewxKbY2PRvm05mPc/zOH5W5WVCHDQ1SmNxEPBQdUeeSNh29aIqW9zEQkA3kMuA==
+express-graphql@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.12.0.tgz#58deabc309909ca2c9fe2f83f5fbe94429aa23df"
+  integrity sha512-DwYaJQy0amdy3pgNtiTDuGGM2BLdj+YO2SgbKoLliCfuHv3VVTt7vNG/ZqK2hRYjtYHE2t2KB705EU94mE64zg==
   dependencies:
-    accepts "^1.3.0"
+    accepts "^1.3.7"
     content-type "^1.0.4"
-    http-errors "^1.3.0"
-    raw-body "^2.3.2"
+    http-errors "1.8.0"
+    raw-body "^2.4.1"
 
 express-status-monitor@^1.2.11:
   version "1.3.4"
@@ -2825,15 +2825,16 @@ html-encoding-sniffer@^1.0.2:
   dependencies:
     whatwg-encoding "^1.0.1"
 
-http-errors@1.6.3, http-errors@~1.6.2:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.6.3.tgz#8b55680bb4be283a0b5bf4ea2e38580be1d9320d"
-  integrity sha1-i1VoC7S+KDoLW/TqLjhYC+HZMg0=
+http-errors@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.0.tgz#75d1bbe497e1044f51e4ee9e704a62f28d336507"
+  integrity sha512-4I8r0C5JDhT5VkvI47QktDW75rNlGVsUf/8hzjCC/wkWI/jdTRmBb9aI7erSG82r1bjKY3F6k28WnsVxB1C73A==
   dependencies:
     depd "~1.1.2"
-    inherits "2.0.3"
-    setprototypeof "1.1.0"
-    statuses ">= 1.4.0 < 2"
+    inherits "2.0.4"
+    setprototypeof "1.2.0"
+    statuses ">= 1.5.0 < 2"
+    toidentifier "1.0.0"
 
 http-errors@2.0.0:
   version "2.0.0"
@@ -2846,16 +2847,15 @@ http-errors@2.0.0:
     statuses "2.0.1"
     toidentifier "1.0.1"
 
-http-errors@^1.3.0:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.7.1.tgz#6a4ffe5d35188e1c39f872534690585852e1f027"
-  integrity sha512-jWEUgtZWGSMba9I1N3gc1HmvpBUaNC9vDdA46yScAdp+C5rdEuKWUBLWTQpW9FwSWSbYYs++b6SDCxf9UEJzfw==
+http-errors@~1.6.2:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.6.3.tgz#8b55680bb4be283a0b5bf4ea2e38580be1d9320d"
+  integrity sha1-i1VoC7S+KDoLW/TqLjhYC+HZMg0=
   dependencies:
     depd "~1.1.2"
     inherits "2.0.3"
     setprototypeof "1.1.0"
-    statuses ">= 1.5.0 < 2"
-    toidentifier "1.0.0"
+    statuses ">= 1.4.0 < 2"
 
 http-signature@~1.2.0:
   version "1.2.0"
@@ -2865,13 +2865,6 @@ http-signature@~1.2.0:
     assert-plus "^1.0.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
-
-iconv-lite@0.4.23:
-  version "0.4.23"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
-  integrity sha512-neyTUVFtahjf0mB3dZT77u+8O0QB89jFdnBkd5P1JgYPbPaia3gXXOVL2fq8VyU2gMMD7SaN7QukTB/pmXYvDA==
-  dependencies:
-    safer-buffer ">= 2.1.2 < 3"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
@@ -5291,14 +5284,14 @@ raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-raw-body@^2.3.2:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.3.3.tgz#1b324ece6b5706e153855bc1148c65bb7f6ea0c3"
-  integrity sha512-9esiElv1BrZoI3rCDuOuKCBRbuApGGaDPQfjSflGxdy4oyzqghxu6klEkkVIvBje+FF0BX9coEv8KqW6X/7njw==
+raw-body@^2.4.1:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.5.2.tgz#99febd83b90e08975087e8f1f9419a149366b68a"
+  integrity sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==
   dependencies:
-    bytes "3.0.0"
-    http-errors "1.6.3"
-    iconv-lite "0.4.23"
+    bytes "3.1.2"
+    http-errors "2.0.0"
+    iconv-lite "0.4.24"
     unpipe "1.0.0"
 
 rc@^1.2.7:
