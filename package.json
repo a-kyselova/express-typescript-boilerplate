@@ -55,7 +55,7 @@
     "express-status-monitor": "^1.2.11",
     "faker": "^4.1.0",
     "figlet": "^1.6.0",
-    "glob": "^7.1.2",
+    "glob": "^7.2.3",
     "graphql": "14.7.0",
     "helmet": "^3.21.1",
     "jsonfile": "5.0.0",
